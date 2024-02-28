@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Gadgets</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body class="font-poppins">
+    <header class="bg-[#0D6EFD0D] h-full md:h-[806px] lg:h-[806px]">
+       <div class="max-w-[1140px] pb-10 md:pb-0 lg:pb-0 mx-auto relative">
+        <nav class="pt-8">
+            <div class="navbar">
+                <div class="flex-1">
+                  <a class="btn btn-ghost text-xl">daisyUI</a>
+                </div>
+                <div class="flex-none">
+                    <button class="btn flex-nowrap py-4 rounded-lg px-8 bg-[#0D6EFD] text-xl font-bold text-white">Sign Up</button>
+                </div>
+              </div>
+        </nav>
+        <div class="text-center mt-16">
+            <h3 class="text-6xl font-bold text-black">Apple Iphone 13 Pro Max</h3>
+            <p class="text-lg text-[#706F6F] pb-8 pt-6">There are many features in this phone. Modern generation will be fit for this. <br>
+                 Always giving the top performance</p>
+                 <button class="btn flex-nowrap py-4 rounded-lg px-8 bg-[#0D6EFD] text-xl font-bold text-white">Buy Now</button>
+        </div>
+
+        <div class="hidden md:flex lg:flex items-end justify-center pt-14">
+            <div>
+                <img src="./images/pngwing 3.png" alt="">
+            </div>
+            <img src="./images/pngwing 1.png" alt="">
+            <div>
+                <img src="./images/pngwing 3.png" alt="">
+            </div>
+        </div>
+       </div>
+
+    </header>
+    <main>
+        <section class="max-w-[1140px] mt-10 md:mt-96 lg:mt-96 mx-auto">
+            <h3 class="text-4xl text-center text-black  font-semibold">Search your phone</h3>
+            <label class="input mt-8 input-bordered flex bg-[#100F0F0D] w-full md:w-1/2 lg:w-1/2 mx-auto border-none pr-0 items-center">
+                <img src="./images/Frame.svg" alt="">
+                <input id="search-input" type="text" class="grow  text-[#706F6F]" placeholder="Search your phone" />
+                <button onclick="search()" class="btn flex-nowrap py-4 rounded-lg px-5 bg-[#0D6EFD] text-xl font-bold text-white">Search</button>
+            </label>
+
+            <div id="loading" class="hidden text-center mt-40">
+                <span class="loading loading-spinner text-error loading-lg"></span>
+            </div>
+
+            <div id="phone-container" class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+            </div>
+
+            <div id="show-all" class="hidden mt-12 text-center">
+                <button onclick="showAll()" class="btn flex-nowrap py-4 rounded-lg px-8 bg-[#0D6EFD] text-xl font-bold text-white">Show All</button>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#0D6EFD0D]  mt-28  pt-28">
+        <div class="max-w-[1140px] mx-auto">
+            <div class="footer  text-neutral-content justify-between">
+                <aside>
+              
+                    <p class="text-[45px] font-bold text-black font-sans">Hot Gadgets</p>
+                    <p class="font-sans text-[#706F6F] text-lg pt-3 font-semibold">You can definitely work.</p>
+                  </aside> 
+                  <nav>
+                    <div class="grid grid-flow-col gap-4">
+                      <a href=""><img src="./images/Facebook.png" alt=""></a>
+                      <a href=""><img src="./images/Twitter.png" alt=""></a>
+                      <a href=""><img src="./images/Instagram.png" alt=""></a>
+                      <button class="btn flex-nowrap py-4 rounded-lg px-8 bg-[#0D6EFD] text-xl font-bold text-white">Join Premium</button>
+                    </div>
+                    
+                  </nav>
+            </div>
+            <hr class="mt-12">
+            <div class="flex flex-col md:flex-row lg:flex-row justify-between pb-28 pt-12">
+                <nav class="flex flex-col">
+                    <h6 class=" text-lg font-medium text-[#403F3F]">Product</h6> 
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Browse jobs</a>
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Remote jobs</a>
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Startup jobs</a>
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Company jobs</a>
+                  </nav> 
+                <nav class="flex flex-col pt-7 lg:pt-0">
+                    <h6 class=" text-lg font-medium text-[#403F3F]">Popular</h6> 
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">UIUX Design</a>
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Product Design</a>
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Back-End Developer</a>
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Front-End Developer</a>
+                  </nav> 
+                <nav class="flex flex-col pt-7 lg:pt-0">
+                    <h6 class=" text-lg font-medium text-[#403F3F]">Resource</h6> 
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Faqs</a>
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Support</a>
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Privacy Policy</a>
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Terms of Service</a>
+                  </nav> 
+                <nav class="flex flex-col pt-7 lg:pt-0">
+                    <h6 class=" text-lg font-medium text-[#403F3F]">Company</h6> 
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">About Us</a>
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Contact Us</a>
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Career Tips</a>
+                    <a class="link text-lg font-medium text-[#403F3F] link-hover">Careers</a>
+                  </nav> 
+                
+            </div>
+        </div>
+      </footer>
+    <script src="./js/style.js"></script>
+</body>
+
+</html>
